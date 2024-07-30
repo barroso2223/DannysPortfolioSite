@@ -257,7 +257,7 @@ ul {
 	justify-content: center;
 }
 #typeWriterContainer h1 {
-	font-size: var(--fsContentHeader);
+	font-size: var(--fsSpecial);
 	width: fit-content;
 	margin: 0 auto;
 	font-family: "Source Code Pro", monospace, Arial, Helvetica, sans-serif;
