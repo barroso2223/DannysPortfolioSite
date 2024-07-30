@@ -302,6 +302,7 @@ ul {
 	padding: 3rem 2rem;
 	min-height: 100dvh;
 	width: 100dvw;
+	display: grid;
 	background: linear-gradient(110deg, var(--clrMain900) 68%,  var(--clrThemePink) 5%, var(--clrThemeTeal));
 	color: var(--clrMain100);
 }
@@ -309,6 +310,7 @@ ul {
 #aboutMe .aboutMeLeft {
 	color: var(--clrMain100);
 	width: clamp(300px, 40dvw, 700px);
+	display: grid;
 }
 
 #aboutMe .major h2 {
@@ -321,7 +323,7 @@ ul {
 	height: fit-content;
 }
 
-#aboutMe .major h3 {
+#aboutMe h3 {
 	color: var(--clrMain100);
 	font-size: var(--fsMain);
 }
@@ -346,11 +348,58 @@ ul {
 	color: rgb(102, 187, 213);
 }
 
+.wrapper {
+	box-sizing: content-box;
+	font-size:  var(--fsSpecial);
+	height: 1.5rem;
+	padding: .5rem;
+	display: flex;
+
+}
+.words {
+	overflow: hidden;
+	font-size: var(--fsSpecial);
+}
+
+.wrapper span {
+	display: block;
+	height: 100%;
+	padding-left: 10px;
+	animation: spinWords 15s infinite;
+}
+
+@keyframes spinWords{
+	10% {
+		transform: translateY(-112%);
+	}
+	25% {
+		transform: translateY(-100%);
+	}
+	35% {
+		transform: translateY(-212%);
+	}
+	50% {
+		transform: translateY(-200%);
+	}
+	60% {
+		transform: translateY(-312%);
+	}
+	75% {
+		transform: translateY(-300%);
+	}
+	85% {
+		transform: translateY(-412%);
+	}
+	100% {
+		transform: translateY(-400%);
+	}
+}
+
 /* .tab {
 	margin-left: 5rem;
 } */
 
-#aboutMe .major h2 span {
+/* #aboutMe .major h2 span {
 	display: block;
 	height: fit-content;
 	font-weight: 600;
@@ -370,7 +419,7 @@ ul {
 		25%,100% {
 			display: none;
 		}
-	} 
+	}  */
 
 #aboutMe .imgContainer {
 	padding: 1rem;
