@@ -852,7 +852,7 @@ ul {
 /* Footer */
 
 #footer {
-	height: 20dvh;
+	height: 10dvh;
 	width: 100dvw;
 	padding: 2em 0 2em 0 ;
 	color: var(--clrMain100);
