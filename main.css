@@ -619,9 +619,9 @@ ul {
 	#contactMe {
 		color: var(--clrMain100);
 		background: linear-gradient(45deg, black, var(--clrThemeTeal), var(--clrThemePink));
-		height: 70dvh;
+		min-height: 80dvh;
 		width: 100dvw;
-		padding: 5rem 3rem;
+		padding: 2rem 2rem;
 		display: grid;
 		text-align: center;
 		place-items: center;
@@ -903,19 +903,27 @@ ul {
 /* Footer */
 
 #footer {
-	height: 10dvh;
+	min-height: 20dvh;
 	width: 100dvw;
 	padding: 2em 0 2em 0 ;
 	color: var(--clrMain100);
-	background: rgb(74, 69, 69);
 	background-image: url("./images/miaminights2.jpg");
 	overflow: hidden;
-	background-size: 50%;
-	background-repeat: repeat;
-	height: 30dvh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 	text-align: center;
+	margin-bottom: 1rem;
+	z-index: 1000;
 }
 
+#footer:before {
+	content: "";
+	position: absolute;
+	background: var(--clrMain900);
+	opacity: .7;
+	z-index: -1;
+}
 
 #footer a {
 	list-style: none;
