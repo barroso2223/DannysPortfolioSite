@@ -247,6 +247,7 @@ ul {
 	display: grid;
 	place-content: center;
 	text-align: center;
+	overflow: hidden;
 }
 #typeWriterContainer h2 {
 	margin: 0 2rem;
