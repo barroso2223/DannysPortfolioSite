@@ -281,7 +281,7 @@ ul {
 #typeWriterContainer h1:after {
 	width: .125em;
 	background: white;
-	height: 2.125rem;
+	height: clamp(var(--fsSpecial));
 	animation: typewriter 6s steps(23) 2s forwards, 
 		blink 900ms infinite;
 }
