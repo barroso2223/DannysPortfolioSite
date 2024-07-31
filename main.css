@@ -621,7 +621,7 @@ ul {
 		background: linear-gradient(45deg, black, var(--clrThemeTeal), var(--clrThemePink));
 		min-height: 80dvh;
 		width: 100dvw;
-		padding: 2rem 2rem;
+		padding: .5rem 2rem;
 		display: grid;
 		text-align: center;
 		place-items: center;
@@ -653,10 +653,44 @@ ul {
 		place-content: center;
 		text-align: center;
 	}
+
+	.contactLinks {
+		display: grid;	
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		place-items: center;
+	}
 	
 	.contactGrid {
+		width: 300px;
 		display: flex;
-		justify-content: space-between;
+		padding-right: .5rem;
+		margin-right: 3rem;
+	}
+
+	.contactGrid .buttons {
+		width: 4rem;
+		height: 1.5rem;
+		gap: .5rem;
+	}
+
+	.contactGrid li {
+		display: flex;
+		flex-direction: column;
+		margin: 0 1rem;
+	}
+
+	.calendar {
+		width: clamp(300px, 40dvw, 600px);
+		max-height: 500px;
+		background: var(--clrMain100);
+		border: 2px solid var(--clrMain900);
+		border-radius: .5rem;
+		margin: 1rem 2rem;
+		place-items: center;
+	}
+
+	.calendar a {
+		color: var(--clrThemeTeal);
 	}
 
 	/* hambrgerMenu */
