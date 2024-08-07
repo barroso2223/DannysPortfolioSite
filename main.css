@@ -65,11 +65,13 @@ body {
 	font-size: .5rem;
 }
 
-#selector input[type="radio"]#dark {
+#selector input[type="radio"]#dark,
+#selector input[type="radio"]#noche {
 	--radioColor: black;
 }
 
-#selector input[type="radio"]#light {
+#selector input[type="radio"]#light,
+#selector input[type="radio"]#dia {
 	--radioColor: white;
 }
 /* 
@@ -81,7 +83,8 @@ body {
 	--radioColor: var(--clrMain100);
 } */
 
-:root:has(#dark:checked) {
+:root:has(#dark:checked),
+:root:has(#noche:checked) {
 	--clrThemePink: rgb(223, 84, 195);
 	--clrThemeTeal: rgb(17, 221, 204);
 	--clrMain100: white;
@@ -90,13 +93,15 @@ body {
 	
 }
 
-:root:has(#light:checked) {
+:root:has(#light:checked),
+:root:has(#dia:checked) {
 	--clrThemePink: rgb(223, 84, 195);
 	--clrThemeTeal: rgb(17, 221, 204);
 	--clrMain900: white;
 	--clrMain100: black;
 
-	#home {
+	#home,
+	#change {
 		background-image: url(images/Miami\ Day2.png);
 		background-size: cover;
 		aspect-ratio: 16/9;
@@ -112,21 +117,23 @@ body {
 	}
 }
 
-:root:has(#Family:checked) {
-	--clrThemePink: rgb(223, 84, 195);
+:root:has(#Family:checked),
+:root:has(#familia:checked) {
+	--clrThemePink: rgb(103, 202, 230);
 	--clrThemeTeal: rgb(17, 221, 204);
 	--clrMain900: white;
 	--clrMain100: black;
 
-	#home {
-		background-image: url(images/Miami\ Day2.png);
+	#home,
+	#change {
+		background-image: url(images/familycanvaadjusted.png);
 		background-size: cover;
 		aspect-ratio: 16/9;
-		object-position: center;
+		object-position: bottom;
 	}
 
 	#footer {
-		background-image: url(images/Miami\ Day2.png);
+		background-image: url(images/family.jpg);
 		overflow: hidden;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
@@ -134,13 +141,15 @@ body {
 	}
 }
 
-:root:has(#Sports:checked) {
+:root:has(#Sports:checked),
+:root:has(#deportes:checked) {
 	--clrThemePink: rgb(248, 160, 20);
 	--clrThemeTeal: rgb(44, 214, 200);
 	--clrMain900: rgb(82, 67, 20);
 	--clrMain100: white;
 
-	#home {
+	#home,
+	#change {
 		background-image: url(images/miamiSports9.png);
 		background-size: cover;
 		aspect-ratio: 16/9;
@@ -160,7 +169,7 @@ body {
 	}
 }
 
-.languageButtons {
+/* .languageButtons {
 	display: flex;
 	gap: 1rem;
 	width: fit-content;
@@ -181,7 +190,7 @@ body {
 	border: 2px solid var(--clrMain100);
 	color: var(--clrMain100);
 	
-}
+} */
 
 /* .hidden {
 	display: none;
