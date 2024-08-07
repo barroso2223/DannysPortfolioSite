@@ -28,7 +28,169 @@ body {
     font-size: var(--fsMain);
     line-height: 1.6;
     color: var(--clrMain100);
+	background: var(--clrMain900);
 }
+
+#selector {
+	display: flex;
+	height: 8dvh;
+	justify-content: center;
+	align-items: center;
+	width: max-content;
+	background: linear-gradient(var(--clrThemePink), var(--clrThemeTeal));
+	border: 1px solid var(--clrMain900);
+	border-radius: .5rem;
+	gap: 2em;
+	padding: 1rem 2rem;
+	margin-inline: auto;
+	color: var(--clrMain900);
+}
+
+#selector fieldset {
+	border: none;
+	display: flex;
+	gap: 2em;
+	padding: 0 2rem;
+	margin-inline: auto;
+}
+
+#selector input[type="radio"] {
+	appearance: none;
+	width: 1rem;
+	height: 1rem;
+	border: 3px solid var(--radioColor, currentColor);
+	border-radius: 50%;
+}
+
+#selector input[type="radio"]#dark {
+	--radioColor: black;
+}
+
+#selector input[type="radio"]#light {
+	--radioColor: white;
+}
+/* 
+#selector input[type="radio"]#english {
+	--radioColor: var(--clrMain100);
+}
+
+#selector input[type="radio"]#change {
+	--radioColor: var(--clrMain100);
+} */
+
+:root:has(#dark:checked) {
+	--clrThemePink: rgb(223, 84, 195);
+	--clrThemeTeal: rgb(17, 221, 204);
+	--clrMain100: white;
+	--clrMain900: black;
+
+	
+}
+
+:root:has(#light:checked) {
+	--clrThemePink: rgb(223, 84, 195);
+	--clrThemeTeal: rgb(17, 221, 204);
+	--clrMain900: white;
+	--clrMain100: black;
+
+	#home {
+		background-image: url(images/Miami\ Day2.png);
+		background-size: cover;
+		aspect-ratio: 16/9;
+		object-position: center;
+	}
+
+	#footer {
+		background-image: url(images/Miami\ Day2.png);
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+:root:has(#Family:checked) {
+	--clrThemePink: rgb(223, 84, 195);
+	--clrThemeTeal: rgb(17, 221, 204);
+	--clrMain900: white;
+	--clrMain100: black;
+
+	#home {
+		background-image: url(images/Miami\ Day2.png);
+		background-size: cover;
+		aspect-ratio: 16/9;
+		object-position: center;
+	}
+
+	#footer {
+		background-image: url(images/Miami\ Day2.png);
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+}
+
+:root:has(#Sports:checked) {
+	--clrThemePink: rgb(248, 160, 20);
+	--clrThemeTeal: rgb(44, 214, 200);
+	--clrMain900: rgb(82, 67, 20);
+	--clrMain100: white;
+
+	#home {
+		background-image: url(images/miamiSports9.png);
+		background-size: cover;
+		aspect-ratio: 16/9;
+		object-position: center;
+		top: 60%;
+		left: 0;
+	}
+
+	#footer {
+		background-image: url(images/miamiSports9.png);
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		bottom: 0;
+		place-items: end;
+	}
+}
+
+.languageButtons {
+	display: flex;
+	gap: 1rem;
+	width: fit-content;
+	height: fit-content;
+}
+
+.languageButtons span {
+	display: grid;
+	place-items: center;
+	gap: 1rem;
+	border: 2px solid var(--clrMain900);
+	border-radius: .5rem;
+	background: transparent;
+	color: var(--clrMain900);
+}
+
+.languageButtons span:hover {
+	border: 2px solid var(--clrMain100);
+	color: var(--clrMain100);
+	
+}
+
+/* .hidden {
+	display: none;
+}
+
+#original {
+	display: grid;
+} */
+
+/* #change {
+	display: hidden;
+} */
 
 body,
 h1,
@@ -135,15 +297,18 @@ ul {
 	color: var(--clrMain900);
 }
 
-/* Header */
+/* home */
 
-#header {
-	height: 100dvh;
+#home, 
+#change {
+	min-height: 90dvh;
 	width: 100dvw;
-	padding: 3em 0 3em 0 ;
-	color: rgba(255, 255, 255, 0.75);background: rgb(44, 41, 41);
+	padding: .5rem 0 2rem 0 ;
+	color: rgba(255, 255, 255, 0.75);
+	background: rgb(44, 41, 41);
 	background-image: url("./images/miaminights2.jpg");
-	background-blend-mode: hard-light;background-size: cover;
+	background-blend-mode: hard-light;
+	background-size: cover;
 	object-fit: cover;
 	aspect-ratio: 16 / 9;
 	overflow: hidden;
@@ -152,11 +317,12 @@ ul {
 
 }
 
-#header:before {
+#home:before,
+#change:before {
 	position: absolute;
 	content: "";
 	width: 50%;
-	height: 200px;
+	height: 300px;
 	bottom: -70px;
 	left: 0;
 	background: linear-gradient(to right, var(--clrMain900), var(--clrThemePink), var(--clrThemeTeal), rgb(19, 220, 204) );
@@ -164,11 +330,12 @@ ul {
 	overflow: hidden;
 }
 
-#header:after {
+#home:after,
+#change:after {
 	position: absolute;
 	content: "";
 	width: 50%;
-	height: 200px;
+	height: 300px;
 	bottom: -70px;
 	right: 0;
 	background: linear-gradient(to right, rgb(19, 220, 204), var(--clrThemeTeal), var(--clrThemePink), var(--clrMain900));
@@ -176,18 +343,26 @@ ul {
 	overflow: hidden;
 }
 
-#header .inner {
-	display: grid;
-}
-
 .myLogo img {
-	padding-bottom: 3rem;
+	padding-bottom: 2rem;
+	padding-top: 1rem;
 	max-height: 120px;
 	width: clamp(15rem, 30dvw, 30rem);
 	object-fit: cover;
 }
 
-#header .inner {
+.myLogo {
+	position: relative;
+}
+
+.myLogo :before {
+	position: absolute;
+	background: var(--clrMain900);
+	opacity: .5;
+}
+
+#home .inner,
+#change .inner {
 	place-content: center;
 	display: grid;
 	text-align: center;
@@ -195,6 +370,14 @@ ul {
 	opacity: 1;
 	position: relative;
 	z-index: 1;
+	color: var(--clrMain100);
+}
+
+#home .inner span,
+#change .inner span {
+	color: var(--clrMain100);
+	display: grid;
+	place-items: center;
 }
 
 .flexColumn {
@@ -213,8 +396,8 @@ ul {
 .flexColumn:before {
 	content: "";
 	position: absolute;
-	background: black;
-	opacity: .7;
+	background: var(--clrMain900);
+	opacity: .8;
 	inset: 0;
 	z-index: -1;
 }
@@ -253,7 +436,7 @@ ul {
 	margin: 0 2rem;
 	text-align: center;
 	font-weight: 600;
-	color: white;
+	color: var(--clrMain100);
 	justify-content: center;
 }
 #typeWriterContainer h1 {
@@ -263,7 +446,7 @@ ul {
 	font-family: "Source Code Pro", monospace, Arial, Helvetica, sans-serif;
 	position: relative;
 	text-align: center;
-	color: white;
+	color: var(--clrMain100);
 }
 #typeWriterContainer h1:before,
 #typeWriterContainer h1:after {
@@ -275,12 +458,12 @@ ul {
 	left: 0;
 }
 #typeWriterContainer h1:before {
-	background: rgb(7, 7, 7);
+	background: var(--clrMain900);
 	animation: typewriter 6s steps(23) 2s forwards;
 }
 #typeWriterContainer h1:after {
 	width: .125em;
-	background: white;
+	background: var(--clrMain100);
 	height: clamp(var(--fsSpecial));
 	animation: typewriter 6s steps(23) 2s forwards, 
 		blink 900ms infinite;
@@ -298,7 +481,8 @@ ul {
 
 /* animate */
 
-#aboutMe {
+#aboutMe,
+#Me {
 	padding: 3rem 2rem;
 	min-height: 100dvh;
 	width: 100dvw;
@@ -307,13 +491,15 @@ ul {
 	color: var(--clrMain100);
 }
 
-#aboutMe .aboutMeLeft {
+#aboutMe .aboutMeLeft, 
+#Me .aboutMeLeft {
 	color: var(--clrMain100);
 	width: clamp(300px, 40dvw, 700px);
 	display: grid;
 }
 
-#aboutMe .major h2 {
+#aboutMe .major h2, 
+#Me .major h2 {
 	box-sizing: content-box;
 	position: relative;
 	font-size: var(--fsMain);
@@ -323,7 +509,8 @@ ul {
 	height: fit-content;
 }
 
-#aboutMe h3 {
+#aboutMe h3, 
+#Me h3 {
 	color: var(--clrMain100);
 	font-size: var(--fsMain);
 }
@@ -332,19 +519,23 @@ ul {
 	color: var(--clrMain100);
 }
 
-#aboutMe #teal {
+#aboutMe #teal, 
+#Me #teal {
 	color: var(--clrThemeTeal);
 }
 
-#aboutMe #pink {
+#aboutMe #pink, 
+#Me #pink {
 	color: var(--clrThemePink);
 }
 
-#aboutMe #purple {
+#aboutMe #purple, 
+#Me #purple {
 	color: rgb(169, 144, 203);
 }
 
-#aboutMe #blue {
+#aboutMe #blue, 
+#Me #blue {
 	color: rgb(102, 187, 213);
 }
 
@@ -352,6 +543,7 @@ ul {
 	box-sizing: content-box;
 	font-size:  var(--fsSpecial);
 	height: 1.5rem;
+	line-height: 1.5;
 	padding: .5rem;
 	display: flex;
 
@@ -421,7 +613,8 @@ ul {
 		}
 	}  */ */
 
-#aboutMe .imgContainer {
+#aboutMe .imgContainer,
+#me .imgContainer {
 	padding: 1rem;
 	display: grid;
 	place-items: center;
@@ -429,7 +622,8 @@ ul {
 	padding-right: 2rem;
 }
 
-#aboutMe .imgContainer img {
+#aboutMe .imgContainer img,
+#me .imgContainer img {
 	border-radius: .5rem;
 	max-width: 400px;
 	display: grid;
@@ -473,7 +667,8 @@ ul {
 		overflow: hidden;
 	} */
 	
-	#developer {
+	#developer,
+	#Desarrollador {
 		background: linear-gradient(to right, var(--clrThemePink), var(--clrThemeTeal));
 		color: var(--clrMain100);
 		min-height: 100dvh;
@@ -522,33 +717,39 @@ ul {
 		list-style: none;
 	}
 	
-	#website {
+	#website, 
+	#Sitios {
 		min-height: 100dvh;
 		width: 100dvw;
 		padding: 2rem 2rem;
-		background: black;
+		background: var(--clrMain900);
+		color: var(--clrMain100);
 		background-size: cover;
 		object-fit: contain;
 	}
 
-	#website header {
+	#website header, 
+	#Sitios header {
 		margin: auto;
 	}
 
-	#website .container {
+	#website .container, 
+	#Sitios .container {
 		display: flex;
 		flex-direction: column;
 		gap: .5rem;
 	}
 
-	#website p{
+	#website p, 
+	#Sitios p {
 		text-align: center;
-		color: white;
+		color: var(--clrMain100);
 		margin: auto;
 		max-width: 900px;
 	}
 
-	#website .portfolioGrid {
+	#website .portfolioGrid, 
+	#Sitios .portfolioGrid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		min-height: 250px;
@@ -560,7 +761,7 @@ ul {
 		max-width: 300px;
 		height: 200px;
 		border-radius: .5rem;
-		background: linear-gradient(to right, var(--clrThemePink), var(--clrThemeTeal) 40%, black 5% );
+		background: linear-gradient(to right, var(--clrThemePink), var(--clrThemeTeal) 40%, var(--clrMain900) 5% );
 		padding: .5rem;
 		margin: 1rem auto;
 		display: grid;
@@ -608,7 +809,7 @@ ul {
 		place-items: center;
 	}
 
-	#website .arrowClass a {
+	#website .arrowClass a, #Sitios .arrowClass a {
 		text-decoration: none;
 		height: 3dvh;
 	}
@@ -616,9 +817,10 @@ ul {
 		height: 3dvh;
 		margin: auto;
 	}
-	#contactMe {
+	#contactMe, 
+	#Contacto {
 		color: var(--clrMain100);
-		background: linear-gradient(45deg, black, var(--clrThemeTeal), var(--clrThemePink));
+		background: linear-gradient(45deg, var(--clrMain900), var(--clrThemeTeal), var(--clrThemePink));
 		min-height: 80dvh;
 		width: 100dvw;
 		padding: .5rem 2rem;
@@ -627,7 +829,8 @@ ul {
 		place-items: center;
 		position: relative;
 	}
-	#contactMe::before {
+	#contactMe::before,
+	#Contacto::before {
 		content: "";
 		position: absolute;
 		background-image: url("/images/homePage.png");
@@ -668,8 +871,9 @@ ul {
 	}
 
 	.contactGrid .buttons {
-		width: 4rem;
-		height: 1.5rem;
+		width: fit-content;
+		margin: .5rem .5rem;
+		height: fit-content;
 		gap: .5rem;
 	}
 
