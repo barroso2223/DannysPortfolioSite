@@ -44,7 +44,7 @@ body {
 	padding: 1rem 2rem;
 	margin-inline: auto;
 	color: var(--clrMain900);
-	font-size: .75rem;
+	font-size: .5rem;
 }
 
 #selector fieldset {
@@ -53,7 +53,7 @@ body {
 	gap: 2em;
 	padding: 0 .5rem;
 	margin-inline: auto;
-	font-size: .75rem;
+	font-size: .5rem;
 }
 
 #selector input[type="radio"] {
@@ -62,7 +62,7 @@ body {
 	height: .75rem;
 	border: 3px solid var(--radioColor, currentColor);
 	border-radius: 50%;
-	font-size: .75rem;
+	font-size: .5rem;
 }
 
 #selector input[type="radio"]#dark {
