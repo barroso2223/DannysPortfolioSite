@@ -119,15 +119,16 @@ body {
 
 :root:has(#Family:checked),
 :root:has(#familia:checked) {
-	--clrThemePink: rgb(103, 202, 230);
-	--clrThemeTeal: rgb(17, 221, 204);
-	--clrMain900: rgb(201, 206, 201);
+	--clrThemePink: rgb(163, 226, 244);
+	--clrThemeTeal: rgb(16, 170, 157);
+	--clrMain900: rgb(212, 216, 212);
 	--clrMain100: black;
 
 	#home,
 	#change {
 		background: rgb(85, 88, 85);
 		background-image: url(images/familycroppedmoreleft.png);
+		background-position: center;
 		background-size: cover;
 		background-blend-mode: overlay;
 		aspect-ratio: 16/9;
@@ -135,11 +136,13 @@ body {
 	}
 
 	#footer {
-		background-image: url(images/familycroppedmoreleft.png);
+		background: var(--clrMain900);
+		/* background-image: url(images/familycroppedmoreleft.png);
+		background-position: bottom 5px; */
 		overflow: hidden;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
 		background-size: cover;
+		/* background-blend-mode: overlay; */
 	}
 }
 
@@ -148,7 +151,7 @@ body {
 	--clrThemePink: rgb(248, 160, 20);
 	--clrThemeTeal: rgb(44, 214, 200);
 	--clrMain900: rgb(108, 85, 17);
-	--clrMain100: white;
+	--clrMain100: rgb(249, 245, 231);
 
 	#home,
 	#change {
@@ -167,6 +170,7 @@ body {
 		overflow: hidden;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-position: center -15px;
 	}
 }
 
