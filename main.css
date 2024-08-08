@@ -121,13 +121,15 @@ body {
 :root:has(#familia:checked) {
 	--clrThemePink: rgb(103, 202, 230);
 	--clrThemeTeal: rgb(17, 221, 204);
-	--clrMain900: white;
+	--clrMain900: rgb(201, 206, 201);
 	--clrMain100: black;
 
 	#home,
 	#change {
+		background: rgb(85, 88, 85);
 		background-image: url(images/familycroppedmoreleft.png);
 		background-size: cover;
+		background-blend-mode: overlay;
 		aspect-ratio: 16/9;
 		object-position: bottom;
 	}
@@ -145,13 +147,15 @@ body {
 :root:has(#deportes:checked) {
 	--clrThemePink: rgb(248, 160, 20);
 	--clrThemeTeal: rgb(44, 214, 200);
-	--clrMain900: rgb(82, 67, 20);
+	--clrMain900: rgb(108, 85, 17);
 	--clrMain100: white;
 
 	#home,
 	#change {
-		background-image: url(images/miamiSports9.png);
+		background: rgb(96, 95, 95);
+		background-image: url(images/miamiSports10.png);
 		background-size: cover;
+		background-blend-mode: overlay;
 		aspect-ratio: 16/9;
 		object-position: center;
 		top: 60%;
@@ -159,13 +163,11 @@ body {
 	}
 
 	#footer {
-		background-image: url(images/miamiSports9.png);
+		background: url(images/miamiSports10.png);
 		overflow: hidden;
 		background-repeat: no-repeat;
-		background-attachment: fixed;
 		background-size: cover;
-		bottom: 0;
-		place-items: end;
+		inset: 0;
 	}
 }
 
@@ -240,7 +242,7 @@ span {
 h2, 
 h3,
 p {
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
 }
 
 .fa {
@@ -409,7 +411,7 @@ ul {
 	content: "";
 	position: absolute;
 	background: var(--clrMain900);
-	opacity: .8;
+	opacity: .9;
 	inset: 0;
 	z-index: -1;
 }
