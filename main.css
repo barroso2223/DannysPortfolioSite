@@ -319,7 +319,7 @@ ul {
 #home, 
 #change {
 	min-height: 90dvh;
-	width: 100dvw;
+	max-width: 100dvw;
 	padding: .5rem 0 .5rem 0 ;
 	color: rgba(255, 255, 255, 0.75);
 	background: rgb(44, 41, 41);
@@ -502,7 +502,7 @@ ul {
 #Me {
 	padding: 3rem 2rem;
 	min-height: 100dvh;
-	width: 100dvw;
+	max-width: 100dvw;
 	display: grid;
 	background: linear-gradient(110deg, var(--clrMain900) 68%,  var(--clrThemePink) 5%, var(--clrThemeTeal));
 	color: var(--clrMain100);
@@ -689,7 +689,7 @@ ul {
 		background: linear-gradient(to right, var(--clrThemePink), var(--clrThemeTeal));
 		color: var(--clrMain100);
 		min-height: 100dvh;
-		width: 100dvw;
+		max-width: 100dvw;
 		padding: 1rem 1rem;
 	}
 
@@ -737,7 +737,7 @@ ul {
 	#website, 
 	#Sitios {
 		min-height: 100dvh;
-		width: 100dvw;
+		max-width: 100dvw;
 		padding: 2rem 2rem;
 		background: var(--clrMain900);
 		color: var(--clrMain100);
@@ -763,6 +763,23 @@ ul {
 		color: var(--clrMain100);
 		margin: auto;
 		max-width: 900px;
+	}
+
+	#website .container > a, 
+	#Sitios .container > a {
+		text-align: center;
+		color: var(--clrMain100);
+		margin: auto;
+		border: 2px solid var(--clrMain100);
+		border-radius: .5rem;
+		padding: 0 .5rem;
+		text-decoration: underline;
+		list-style: none;
+	}
+
+	#website .container > a:hover, 
+	#Sitios .container > a:hover {
+		background: var(--clrThemePink);
 	}
 
 	#website .portfolioGrid, 
@@ -839,7 +856,7 @@ ul {
 		color: var(--clrMain100);
 		background: linear-gradient(45deg, var(--clrMain900), var(--clrThemeTeal), var(--clrThemePink));
 		min-height: 80dvh;
-		width: 100dvw;
+		max-width: 100dvw;
 		padding: .5rem 2rem;
 		display: grid;
 		text-align: center;
@@ -1159,7 +1176,7 @@ ul {
 
 #footer {
 	min-height: 20dvh;
-	width: 100dvw;
+	max-width: 100dvw;
 	padding: 2em 0 2em 0 ;
 	color: var(--clrMain100);
 	background-image: url("./images/miaminights2.jpg");
@@ -1185,5 +1202,12 @@ ul {
 	text-decoration: none;
 	color: var(--clrMain100);
 	margin: 0 1rem;
+}
+
+#footer ul li {
+	display: grid;
+	place-items: center;
+	max-width: 90dvw;
+	padding-right: 2rem;
 }
 
