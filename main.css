@@ -5,6 +5,7 @@
 	--clrThemeTeal: rgb(17, 221, 204);
 	--clrMain100: white;
 	--clrMain900: black;
+	--ombreTheme: linear-gradient(120deg, var(--clrThemePink), var(--clrThemeTeal));
 	
 
 	--ffTheme: "Source Code Pro", monospace, Helvetica, sans-serif;
@@ -74,14 +75,6 @@ body {
 #selector input[type="radio"]#dia {
 	--radioColor: white;
 }
-/* 
-#selector input[type="radio"]#english {
-	--radioColor: var(--clrMain100);
-}
-
-#selector input[type="radio"]#change {
-	--radioColor: var(--clrMain100);
-} */
 
 :root:has(#dark:checked),
 :root:has(#noche:checked) {
@@ -110,7 +103,7 @@ body {
 
 	#footer {
 		background-image: url(images/Miami\ Day2.png);
-		overflow: hidden;
+		overflow-x: hidden;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover;
@@ -139,7 +132,7 @@ body {
 		background: var(--clrMain900);
 		/* background-image: url(images/familycroppedmoreleft.png);
 		background-position: bottom 5px; */
-		overflow: hidden;
+		overflow-x: hidden;
 		background-repeat: no-repeat;
 		background-size: cover;
 		/* background-blend-mode: overlay; */
@@ -167,7 +160,7 @@ body {
 
 	#footer {
 		background: url(images/miamiSports10.png);
-		overflow: hidden;
+		overflow-x: hidden;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center -15px;
@@ -767,6 +760,7 @@ ul {
 
 	#website .container > a, 
 	#Sitios .container > a {
+		background: var(--ombreTheme);
 		text-align: center;
 		color: var(--clrMain100);
 		margin: auto;
@@ -817,6 +811,7 @@ ul {
 		display: grid;
 		place-items: center;
 	}
+
 
 	.websiteCard .button {
 		margin: 0 auto;
@@ -1180,7 +1175,7 @@ ul {
 	padding: 2em 0 2em 0 ;
 	color: var(--clrMain100);
 	background-image: url("./images/miaminights2.jpg");
-	overflow: hidden;
+	overflow-x: hidden;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
